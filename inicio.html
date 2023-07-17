@@ -2,3 +2,27 @@
   <h1 class="titulo-centrado">GOATS</h1>
   <!-- Resto del contenido de la página -->
 </body>
+<div class="menu">
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Quiniela</a></li>
+    <li><a href="#">Integrantes</a></li>
+  </ul>
+</div>
+<select id="mySelect">
+  <option value="Liga Mx">Liga MX</option>
+  <option value="Leagues Cup">Leagues Cup</option>
+</select>
+
+<script>
+  function redirectToPage() {
+    var selectElement = document.getElementById("mySelect");
+    var selectedValue = selectElement.value;
+
+    if (selectedValue === "Leagues Cup") {
+      window.location.href = "leaguescup23.html";
+    }
+  }
+
+  document.getElementById("mySelect").addEventListener("change", redirectToPage);
+</script>
