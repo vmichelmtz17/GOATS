@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilo para la tabla */
+    table {
+      width: 100%; /* Ancho de la tabla al 100% */
+      border-collapse: collapse; /* Combinar bordes de celda */
+      border: 1px solid #ccc; /* Borde de la tabla */
+    }
+
+    /* Estilo para las celdas de encabezado */
+    th {
+      background-color: #f2f2f2; /* Color de fondo del encabezado */
+      font-weight: bold; /* Negrita para el texto del encabezado */
+      text-align: left; /* Alinear texto a la izquierda */
+      padding: 8px; /* Espaciado interno de las celdas de encabezado */
+    }
+
+    /* Estilo para las celdas de cuerpo */
+    td {
+      padding: 8px; /* Espaciado interno de las celdas de cuerpo */
+    }
+
+    /* Estilo para las filas impares */
+    tr:nth-child(odd) {
+      background-color: #f9f9f9; /* Color de fondo para filas impares */
+    }
+
+    /* Estilo para los botones */
+    button {
+      padding: 5px 10px; /* Espaciado interno de los botones */
+      border: none; /* Sin borde */
+      background-color: #3399ff; /* Color de fondo del botón */
+      color: #fff; /* Color del texto del botón */
+      cursor: pointer; /* Cambiar cursor al pasar el mouse sobre el botón */
+    }
+
+    /* Estilo para los botones hover (al pasar el mouse) */
+    button:hover {
+      background-color: #1177dd; /* Cambiar el color de fondo del botón al pasar el mouse */
+    }
+
+    /* Estilo para el menú horizontal */
+    ul.menu {
+        list-style-type: none; /* Quitar los puntos de la lista */
+        margin: 0; /* Quitar margen */
+        padding: 0; /* Quitar padding */
+        overflow: hidden; /* Evitar que el contenido sobresalga */
+        background-color: #f2f2f2; /* Color de fondo del menú */
+    }
+
+    ul.menu li {
+        float: left; /* Alinear los elementos en línea horizontal */
+    }
+
+    ul.menu li a {
+        display: block; /* Convertir en elemento de bloque */
+        color: black; /* Color del texto del menú */
+        text-align: center; /* Alinear texto al centro */
+        padding: 14px 16px; /* Espaciado interno de los elementos del menú */
+        text-decoration: none; /* Quitar subrayado del enlace */
+    }
+
+    ul.menu li a:hover {
+        background-color: #ddd; /* Cambiar color de fondo al pasar el mouse */
+    }
+        /* Estilo para el menú desplegable */
+        .dropdown-content {
+      display: none; /* Ocultar el menú desplegable por defecto */
+      position: absolute; /* Posición absoluta */
+      background-color: #f9f9f9; /* Color de fondo del menú desplegable */
+      min-width: 160px; /* Ancho mínimo del menú desplegable */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra del menú desplegable */
+      z-index: 1; /* Posición en el eje z */
+    }
+
+    /* Estilo para los elementos del menú desplegable */
+    .dropdown-content a {
+      color: black; /* Color del texto del menú desplegable */
+      padding: 12px 16px; /* Espaciado interno de los elementos del menú desplegable */
+      text-decoration: none; /* Quitar subrayado del enlace */
+      display: block; /* Convertir en elemento de bloque */
+      text-align: left; /* Alinear texto a la izquierda */
+    }
+
+    /* Estilo para los elementos del menú desplegable al pasar el mouse */
+    .dropdown-content a:hover {
+      background-color: #ddd; /* Cambiar color de fondo al pasar el mouse */
+    }
+
+    /* Estilo para mostrar el menú desplegable al pasar el mouse sobre el elemento padre */
+    .dropdown:hover .dropdown-content {
+      display: block; /* Mostrar el menú desplegable al pasar el mouse */
+    }
+  </style>
+</head>
+<body>
+    <h1 style="text-align: center;">GOATS</h1>
+  
+    <ul class="menu">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Quiniela</a>
+        <div class="dropdown-content">
+          <a href="#">Liga MX</a>
+          <a href="leaguescup23.html">Leagues Cup</a>
+        </div>
+      </li>
+      <li><a href="integrantes.html">Integrantes</a></li>
+    </ul>      
+    <h1 style="text-align: center;">Tabla General Liga Mx A-23</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Posicion</th>
+        <th>Nombre</th>
+        <th>Puntos</th>
+        <th>Agregar Puntos</th>
+        <th>Eliminar Puntos</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>1</td>
+          <td>Michel</td>
+          <td>0</td>
+          <td><button>Victoria</button> <button>Empate</button></td>
+          <td><button>Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jesus</td>
+          <td>0</td>
+          <td><button>Victoria</button> <button>Empate</button></td>
+          <td><button>Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Abraham</td>
+          <td>0</td>
+          <td><button>Victoria</button> <button>Empate</button></td>
+          <td><button>Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Aldo</td>
+          <td>0</td>
+          <td><button>Victoria</button> <button>Empate</button></td>
+          <td><button>Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Manu</td>
+          <td>0</td>
+          <td><button>Victoria</button> <button>Empate</button></td>
+          <td><button>Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Franco</td>
+          <td>0</td>
+          <td><button>Victoria</button> <button>Empate</button></td>
+          <td><button>Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>David</td>
+          <td>0</td>
+          <td><button>Victoria</button> <button>Empate</button></td>
+          <td><button>Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>JC</td>
+          <td>0</td>
+          <td><button>Victoria</button> <button>Empate</button></td>
+          <td><button>Eliminar</button></td>
+        </tr>
+      </tbody>      
+  </table>
+</body>
+</html>
