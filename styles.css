@@ -66,3 +66,6 @@ button {
 button:hover {
   background-color: #1177dd; /* Cambiar el color de fondo del botón al pasar el mouse */
 }
+.submenu {
+  display: none; /* Ocultar el submenu por defecto */
+}
