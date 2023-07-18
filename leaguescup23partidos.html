@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f9f9f9;
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Estilo para la columna de Resultado Final */
+    td.resultado {
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      function actualizarResultado() {
+        $.ajax({
+          url: 'actualizar_resultado.php', // Archivo PHP que obtiene el resultado actualizado
+          method: 'GET',
+          success: function(resultado) {
+            $('.resultado').text(resultado); // Actualiza el contenido de las celdas de resultado con el valor obtenido
+          }
+        });
+      }
+
+      // Actualiza el resultado cada 10 segundos
+      setInterval(actualizarResultado, 10000);
+    });
+  </script>
+</head>
+<body>
+  <h1>Calendario</h1>
+  
+  <table>
+    <tr>
+      <th>Fecha</th>
+      <th>Partido</th>
+      <th>Resultado Final</th>
+    </tr>
+    <tr>
+      <td>7/21</td>
+      <td>Cruz Azul vs Inter de Miami</td>
+      <td class="resultado"></td>
+    </tr>
+    <tr>
+      <td>7/21</td>
+      <td>Orlando vs Houston Dynamo</td>
+      <td class="resultado"></td>
+    </tr>
+    <tr>
+      <td>7/21</td>
+      <td>Austin vs Mazatlán</td>
+      <td class="resultado"></td>
+    </tr>
+    <tr>
+      <td>7/21</td>
+      <td>Dallas vs Charlotte</td>
+      <td class="resultado"></td>
+    </tr>
+    <tr>
+      <td>7/21</td>
+      <td>León vs Vancouver</td>
+      <td class="resultado"></td>
+    </tr>
+  </table>
+</body>
+</html>
