@@ -61,16 +61,37 @@
       <div class="equipo">Cruz Azul</div>
       <div class="equipo">vs</div>
       <div class="equipo">Inter de Miami</div>
-      <img src = "interdemiami.png" alt="Inter de Miami">
+      <img src="interdemiami.png" alt="Inter de Miami">
       <div class="fecha">21 de julio de 2023</div>
       <div class="resultado">
-        <a href="leaguescup23resultado1.html">Conocer resultado</a>
+        <a href="javascript:void(0)" onclick="obtenerResultado('leaguescup23resultado1.php')">Conocer resultado</a>
       </div>
     </div>
-
-    <!-- Agrega más partidos aquí -->
-
   </div>
 
+  <script>
+    function obtenerResultado(url) {
+      // Realiza una petición AJAX para obtener el resultado en tiempo real
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var resultado = JSON.parse(xhr.responseText);
+          mostrarResultado(resultado);
+        }
+      };
+      xhr.open("GET", url, true);
+      xhr.send();
+    }
+
+    function mostrarResultado(resultado) {
+      // Actualiza el contenido del resultado en la página
+      var resultadoContainer = document.querySelector(".calendario");
+      var partidoContainer = resultadoContainer.querySelector(".partido");
+      var resultadoElement = partidoContainer.querySelector(".resultado");
+      resultadoElement.innerHTML = `
+        Resultado: ${resultado.equipoLocal} ${resultado.golesLocal} - ${resultado.golesVisitante} ${resultado.equipoVisitante}
+      `;
+    }
+  </script>
 </body>
 </html>
