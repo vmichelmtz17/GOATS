@@ -3,21 +3,75 @@
 <head>
   <title>Leagues Cup 2023 - Grupos</title>
   <style>
+    /* Estilo para el menú horizontal */
+    ul.menu {
+        list-style-type: none; /* Quitar los puntos de la lista */
+        margin: 0; /* Quitar margen */
+        padding: 0; /* Quitar padding */
+        overflow: hidden; /* Evitar que el contenido sobresalga */
+        background-color: #f2f2f2; /* Color de fondo del menú */
+    }
+
+    ul.menu li {
+        float: left; /* Alinear los elementos en línea horizontal */
+    }
+
+    ul.menu li a {
+        display: block; /* Convertir en elemento de bloque */
+        color: black; /* Color del texto del menú */
+        text-align: center; /* Alinear texto al centro */
+        padding: 14px 16px; /* Espaciado interno de los elementos del menú */
+        text-decoration: none; /* Quitar subrayado del enlace */
+    }
+
+    ul.menu li a:hover {
+        background-color: #ddd; /* Cambiar color de fondo al pasar el mouse */
+    }
+        /* Estilo para el menú desplegable */
+        .dropdown-content {
+      display: none; /* Ocultar el menú desplegable por defecto */
+      position: absolute; /* Posición absoluta */
+      background-color: #f9f9f9; /* Color de fondo del menú desplegable */
+      min-width: 160px; /* Ancho mínimo del menú desplegable */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra del menú desplegable */
+      z-index: 1; /* Posición en el eje z */
+    }
+
+    /* Estilo para los elementos del menú desplegable */
+    .dropdown-content a {
+      color: black; /* Color del texto del menú desplegable */
+      padding: 12px 16px; /* Espaciado interno de los elementos del menú desplegable */
+      text-decoration: none; /* Quitar subrayado del enlace */
+      display: block; /* Convertir en elemento de bloque */
+      text-align: left; /* Alinear texto a la izquierda */
+    }
+
+    /* Estilo para los elementos del menú desplegable al pasar el mouse */
+    .dropdown-content a:hover {
+      background-color: #ddd; /* Cambiar color de fondo al pasar el mouse */
+    }
+
+    /* Estilo para mostrar el menú desplegable al pasar el mouse sobre el elemento padre */
+    .dropdown:hover .dropdown-content {
+      display: block; /* Mostrar el menú desplegable al pasar el mouse */
+    }
     /* Estilos CSS para la presentación */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
       margin: 0;
       padding: 20px;
+      background-image: url("leaguescup23fondo.png");
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     h1 {
       text-align: center;
-      color: #333;
+      color: #b8a609; /* Cambia el color del texto a blanco */
     }
 
     h2 {
-      color: #333;
+      color: #b8a609;
     }
 
     .grupo {
@@ -26,6 +80,8 @@
       width: 200px;
       margin-right: 20px;
       margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Cambia el color de fondo de los grupos */
+      padding: 10px; /* Agrega un espacio interno alrededor de los grupos */
     }
 
     .fila {
@@ -36,6 +92,7 @@
       display: flex;
       align-items: center;
       margin-bottom: 10px;
+      color: #333; /* Cambia el color del texto a negro */
     }
 
     .equipo img {
@@ -43,57 +100,76 @@
       height: 30px;
       margin-right: 10px;
     }
+
+    .equipo span {
+      font-weight: bold; /* Hace que el texto sea en negrita */
+      font-size: 23px;
+    }
   </style>
 </head>
 <body>
+    <h1 style="text-align: center;">GOATS</h1>
+  
+    <ul class="menu">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Quiniela</a>
+        <div class="dropdown-content">
+          <a href="ligamxa23.html">Liga MX</a>
+          <a href="leaguescup23.html">Leagues Cup</a>
+        </div>
+      </li>
+      <li><a href="integrantes.html">Integrantes</a></li>
+    </ul>
+
   <h1>Leagues Cup 2023 - Grupos</h1>
   
   <div class="fila">
     <div class="grupo">
       <h2>OESTE 1</h2>
       <div class="equipo">
-        <img src="tigres.png" alt="Jesus">
+        <img src="tigres.png" alt="Tigres">
         <span>Jesus</span>
       </div>
       <div class="equipo">
-        <img src="sanjose.png" alt="JC">
+        <img src="sanjose.png" alt="San Jose Earthquakes">
         <span>JC</span>
       </div>
       <div class="equipo">
-        <img src="logo3.png" alt="Equipo 3">
-        <span>Equipo 3</span>
+        <img src="portland.png" alt="Portland Timbers">
+        <span>David</span>
       </div>
     </div>
 
     <div class="grupo">
       <h2>OESTE 2</h2>
       <div class="equipo">
-        <img src="logo4.png" alt="Equipo 4">
-        <span>Equipo 4</span>
+        <img src="monterrey.png" alt="Monterrey">
+        <span>Abraham</span>
       </div>
       <div class="equipo">
-        <img src="logo5.png" alt="Equipo 5">
-        <span>Equipo 5</span>
+        <img src="realsaltlake.png" alt="Real Salt Lake">
+        <span>Manu</span>
       </div>
       <div class="equipo">
-        <img src="logo6.png" alt="Equipo 6">
-        <span>Equipo 6</span>
+        <img src="seattle.png" alt="Seattle Sounders">
+        <span>Franco</span>
       </div>
     </div>
 
     <div class="grupo">
       <h2>OESTE 3</h2>
       <div class="equipo">
-        <img src="logo7.png" alt="Equipo 7">
-        <span>Equipo 7</span>
+        <img src="lagalaxy.png" alt="Los Angeles Galaxy">
+        <span>Aldo</span>
       </div>
       <div class="equipo">
-        <img src="logo8.png" alt="Equipo 8">
-        <span>Equipo 8</span>
+        <img src="leon.png" alt="Leon">
+        <span>David</span>
       </div>
       <div class="equipo">
-        <img src="logo9.png" alt="Equipo 9">
-        <span>Equipo 9</span>
+        <img src="vancouver.png" alt="Vancouver Whitecaps">
+        <span>David</span>
       </div>
     </div>
   </div>
@@ -102,69 +178,198 @@
     <div class="grupo">
       <h2>CENTRO 1</h2>
       <div class="equipo">
-        <img src="logo10.png" alt="Equipo 10">
-        <span>Equipo 10</span>
+        <img src="america.png" alt="America">
+        <span>Michel</span>
       </div>
       <div class="equipo">
-        <img src="logo11.png" alt="Equipo 11">
-        <span>Equipo 11</span>
+        <img src="columbus.png" alt="Columbus Crew">
+        <span>Franco</span>
       </div>
       <div class="equipo">
-        <img src="logo12.png" alt="Equipo 12">
-        <span>Equipo 12</span>
+        <img src="stlouis.png" alt="St. Louis City">
+        <span>David</span>
       </div>
     </div>
 
     <div class="grupo">
       <h2>CENTRO 2</h2>
       <div class="equipo">
-        <img src="logo13.png" alt="Equipo 13">
-        <span>Equipo 13</span>
+        <img src="puebla.png" alt="Puebla">
+        <span>Abraham</span>
       </div>
       <div class="equipo">
-        <img src="logo14.png" alt="Equipo 14">
-        <span>Equipo 14</span>
+        <img src="minnesota.png" alt="Minnesota United">
+        <span>JC</span>
       </div>
       <div class="equipo">
-        <img src="logo15.png" alt="Equipo 15">
-        <span>Equipo 15</span>
+        <img src="chicagofire.png" alt="Chicago Fire">
+        <span>Aldo</span>
       </div>
     </div>
 
     <div class="grupo">
       <h2>CENTRO 3</h2>
       <div class="equipo">
-        <img src="logo16.png" alt="Equipo 16">
-        <span>Equipo 16</span>
+        <img src="chivas.png" alt="Chivas">
+        <span>Manu</span>
       </div>
       <div class="equipo">
-        <img src="logo17.png" alt="Equipo 17">
-        <span>Equipo 17</span>
+        <img src="cincinnati.png" alt="Cincinnati">
+        <span>JC</span>
       </div>
       <div class="equipo">
-        <img src="logo18.png" alt="Equipo 18">
-        <span>Equipo 18</span>
+        <img src="sportingkansascity.png" alt="Sporting Kansas City">
+        <span>Franco</span>
       </div>
     </div>
 
     <div class="grupo">
       <h2>CENTRO 4</h2>
       <div class="equipo">
-        <img src="logo19.png" alt="Equipo 19">
-        <span>Equipo 19</span>
+        <img src="nashville.png" alt="Nashville">
+        <span>Michel</span>
       </div>
       <div class="equipo">
-        <img src="logo20.png" alt="Equipo 20">
-        <span>Equipo 20</span>
+        <img src="toluca.png" alt="Toluca">
+        <span>Aldo</span>
       </div>
       <div class="equipo">
-        <img src="logo21.png" alt="Equipo 21">
-        <span>Equipo 21</span>
+        <img src="coloradorapids.png" alt="Colorado Rapids">
+        <span>:v</span>
       </div>
     </div>
   </div>
 
-  <!-- Repite el código para las otras filas -->
+  <div class="fila">
+    <div class="grupo">
+      <h2>SUR 1</h2>
+      <div class="equipo">
+        <img src="austinfc.png" alt="Austin FC">
+        <span>Abraham</span>
+      </div>
+      <div class="equipo">
+        <img src="juarez.png" alt="Juarez FC">
+        <span>Michel</span>
+      </div>
+      <div class="equipo">
+        <img src="mazatlan.png" alt="Mazatlan">
+        <span>:v</span>
+      </div>
+    </div>
 
+    <div class="grupo">
+      <h2>SUR 2</h2>
+      <div class="equipo">
+        <img src="santoslaguna.png" alt="Santos Laguna">
+        <span>Franco</span>
+      </div>
+      <div class="equipo">
+        <img src="orlandocity.png" alt="Orlando City">
+        <span>Michel</span>
+      </div>
+      <div class="equipo">
+        <img src="houstondynamo.png" alt="Houston Dynamo">
+        <span>Aldo</span>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h2>SUR 3</h2>
+      <div class="equipo">
+        <img src="cruzazul.png" alt="Cruz Azul">
+        <span>Manu</span>
+      </div>
+      <div class="equipo">
+        <img src="interdemiami.png" alt="Inter de Miami">
+        <span>Jesus</span>
+      </div>
+      <div class="equipo">
+        <img src="atlantaunited.png" alt="Atlanta United">
+        <span>Franco</span>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h2>SUR 4</h2>
+      <div class="equipo">
+        <img src="fc dallas.png" alt="FC Dallas">
+        <span>Jesus</span>
+      </div>
+      <div class="equipo">
+        <img src="necaxa.png" alt="Necaxa">
+        <span>Aldo</span>
+      </div>
+      <div class="equipo">
+        <img src="charlottefc.png" alt="Charlotte">
+        <span>:v</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="grupo">
+      <h2>ESTE 1</h2>
+      <div class="equipo">
+        <img src="philadelphia.png" alt="Philadelphia">
+        <span>David</span>
+      </div>
+      <div class="equipo">
+        <img src="tijuana.png" alt="Xolos">
+        <span>Abraham</span>
+      </div>
+      <div class="equipo">
+        <img src="queretaro.png" alt="Queretaro">
+        <span>:v</span>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h2>ESTE 2</h2>
+      <div class="equipo">
+        <img src="montreal.png" alt="Montreal">
+        <span>JC</span>
+      </div>
+      <div class="equipo">
+        <img src="pumas.png" alt="Pumas">
+        <span>Jesus</span>
+      </div>
+      <div class="equipo">
+        <img src="dcunited.png" alt="DC United">
+        <span>Manu</span>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h2>ESTE 3</h2>
+      <div class="equipo">
+        <img src="newyorkcity.png" alt="New York City">
+        <span>Manu</span>
+      </div>
+      <div class="equipo">
+        <img src="atlas.png" alt="Atlas">
+        <span>Michel</span>
+      </div>
+      <div class="equipo">
+        <img src="toronto.png" alt="Toronto">
+        <span>Jesus</span>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h2>ESTE 4</h2>
+      <div class="equipo">
+        <img src="newyorkredbull.png" alt="New York Red Bull">
+        <span>Jesus</span>
+      </div>
+      <div class="equipo">
+        <img src="atleticosanluis.png" alt="Atletico San Luis">
+        <span>Abraham</span>
+      </div>
+      <div class="equipo">
+        <img src="newenglandrevolution.png" alt="New England Revolution">
+        <span>:v</span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
